@@ -1,0 +1,89 @@
+/* Search results */
+
+.keyword-tags {
+	width: 80%;
+	margin: 0 auto;
+	padding: 10px 0;
+	max-width: 1080px;
+}
+
+.keyword-tags > .label {
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+
+.keyword-tags .facetwp-facet {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 10px;
+	margin-bottom: 20px;
+}
+
+.keyword-tags .facetwp-checkbox{
+  cursor: pointer;
+  display: inline-block;
+  padding: 0 10px; /* Adjust for pill size */
+	font-size: 75%;
+  background-color: #f0f0f0;
+	background-image: none;
+  border: 2px solid #ccc; /* Pill border */
+  border-radius: 20px; /* Makes it pill-shaped */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover/selected states */
+}
+
+.keyword-tags .facetwp-checkbox:hover,
+.keyword-tags
+.facetwp-checkbox.checked
+/* Adjust this class based on how the plugin indicates selection */ {
+  background-color: #009900;
+	background-image: none!important;
+  color: white;
+}
+
+.search_results .page-header {
+  margin: 100px auto 0;
+	padding: 20px 0;
+  width: 80%;
+  max-width: 1080px;
+}
+
+.search_results .et_pb_row {
+	display: flex;
+	width: 80%;
+	margin: auto;
+	max-width: 1080px;
+}
+
+.search-result-item {
+  margin-bottom: 20px;
+}
+
+.resource-title {
+  font-weight: bold;
+}
+
+.resource-details {
+  display: inline-block;
+  width: 94%;
+  padding-left: 10px;
+}
+
+.resource-content .search-result-item {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.resource-content .search-result-item .resource-details {
+  display: inline-block;
+  width: 80%;
+}
+
+.resource-content .search-result-item .resource-title {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .visible-xs {
+    display: none!important;
+  }
+}

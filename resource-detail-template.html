@@ -1,0 +1,88 @@
+<style type="text/css">
+  h1.entry-title {
+    padding-bottom: 0;
+  }
+  .et_pb_post .entry-content {
+    padding-top: 5px;
+  }
+    h4 {
+		padding-bottom: 20px;
+	}
+	.et_right_sidebar #main-content .container:before {
+		display: none;
+	}
+	#left-area {
+		width: 100%!important;
+	}
+	#left-area .post-meta {
+		display: none;
+	}
+	.property-label {
+		font-weight: bold;
+	}
+	.et_pb_row {
+		display: flex;
+		padding: 10px 0;
+	}
+	.et_pb_row .label {
+		font-weight: bold;
+	}
+	.photo_caption {
+		font-size: small;
+		line-height: 1em;
+	}
+	.resource-fields > span, .resource-fields > p {
+		float: left;
+		clear: both;
+	}
+	.resource-fields > p {
+		margin-top: 10px;
+	}
+</style>
+
+
+<div class="et_pb_row et_pb_gutters1">
+	<div class="et_pb_column_3_4 et_pb_column_0">
+		<h4>by {@authors_names}</h4>
+		<div class="resource-fields">
+			<div><span class="label">Resource Type:</span> {@resource_type}</span></div>
+		    <div><span class="label">Source:</span> {@source}</span></div>
+	        <div><span class="label">Grades:</span> {@grades}</span></div>
+			{@summary}
+		</div>
+	</div>
+	<div class="et_pb_column_1_4 et_pb_column_1">
+		{@photo._img}
+		<span class="photo_caption">
+		{@photo.ID,wp_get_attachment_caption}
+		</span>
+	</div>
+</div>
+<div class="et_pb_row">
+	<div class="et_pb_column_1_2">
+		<div class="label">Phenomena</div>
+		[each phenomena]
+		<div>{@_value}</div>
+		[/each]
+	</div>
+	<div class="et_pb_column_1_2" style="padding-left: 20px">
+		<div class="label">DCIs</div>
+		[each dcis]
+		<div>{@_value}</div>
+		[/each]
+	</div>
+</div>
+<div class="et_pb_row">
+	<div class="et_pb_column_1_2">
+		<div class="label">Notes</div>
+		<div>{@notes}</div>
+	</div>
+	<div class="et_pb_column_1_2" style="padding-left: 20px">
+		<div class="label">Driving questions</div>
+		<div>{@driving_questions}</div>
+	</div>
+</div>
+<div class="et_pb_row" style="display:block">
+	<div class="et_pb_column_4_4"><span style="font-weight:bold;margin-right:10px">Topics:</span>{@topic}</div>
+	<div class="et_pb_column_4_4"><span style="font-weight:bold;margin-right:10px">Features:</span>{@feature}</div>
+</div>
