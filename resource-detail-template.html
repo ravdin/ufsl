@@ -1,12 +1,20 @@
 <style type="text/css">
   h1.entry-title {
     padding-bottom: 0;
+	  color: #666666;
+	  font-weight: 700;
+	  font-size: 36px;
   }
   .et_pb_post .entry-content {
     padding-top: 5px;
   }
     h4 {
+		font-size: 18px;
+		font-weight: 400;
+		color: #666666;
 		padding-bottom: 20px;
+		margin-bottom: 10px;
+		color: #666;
 	}
 	.et_right_sidebar #main-content .container:before {
 		display: none;
@@ -18,18 +26,21 @@
 		display: none;
 	}
 	.property-label {
-		font-weight: bold;
+		font-weight: 600;
 	}
 	.et_pb_row {
 		display: flex;
 		padding: 10px 0;
 	}
 	.et_pb_row .label {
-		font-weight: bold;
+		font-weight: 600;
 	}
 	.photo_caption {
-		font-size: small;
-		line-height: 1em;
+		float: left;
+		font-size: 0.875em;
+		line-height: 1.25em;
+		font-style: italic;
+		padding: 10px;
 	}
 	.resource-fields > span, .resource-fields > p {
 		float: left;
@@ -40,21 +51,28 @@
 	}
 </style>
 
-
-<div class="et_pb_row et_pb_gutters1">
-	<div class="et_pb_column_3_4 et_pb_column_0">
-		<h4>by {@authors_names}</h4>
+<div class="et_pb_row et_pb_row_0" style="border-style: solid; border-color: #63c3a7; border-width: 0px 0px 5px 0px; margin-bottom: 20px;">
+		<div class="et_pb_column et_pb_column_2_3 et_pb_column_0 ">
+			<header class="page-header">
+<h1 class="entry-title">
+</header>
+			</div>
+		</div>
+	</div>
+<div class="et_pb_row et_pb_gutters1"style="border-style: solid; border-color: #63c3a7; border-width: 0px 0px 2px 0px; padding-top:20px;">
+	<div class="et_pb_column_2_3 et_pb_column_0" >
+		<h4>by {@authors_names} </h4>
 		<div>
 			<a class="et_pb_button" href="{@link}" target="_blank" rel="noopener">View</a>
 		</div>
-		<div class="resource-fields">
+		<div class="resource-fields" style="margin-top: 30px;">
 			<div><span class="label">Resource Type:</span> {@resource_type}</span></div>
 		    <div><span class="label">Source:</span> {@source}</span></div>
 	        <div><span class="label">Grades:</span> {@grades}</span></div>
-			{@summary}
+<div style="padding-bottom: 20px; padding-top: 20px;"> {@summary}</div>
 		</div>
 	</div>
-	<div class="et_pb_column_1_4 et_pb_column_1">
+	<div class="et_pb_column_1_3 et_pb_column_1" style="margin-left: 30px;">
 		{@photo._img}
 		<span class="photo_caption">
 		{@photo.ID,wp_get_attachment_caption}
@@ -62,14 +80,14 @@
 	</div>
 </div>
 <div class="et_pb_row">
-	<div class="et_pb_column_1_2">
-		<div class="label">Phenomena</div>
+	<div class="et_pb_column_1_2" style="padding-top: 10px;">
+		<div class="label">Phenomena:</div>
 		[each phenomena]
 		<div>{@_value}</div>
 		[/each]
 	</div>
-	<div class="et_pb_column_1_2" style="padding-left: 20px">
-		<div class="label">DCIs</div>
+	<div class="et_pb_column_1_2" style="padding-top: 10px; padding-left: 30px">
+		<div class="label">DCIs:</div>
 		[each dcis]
 		<div>{@_value}</div>
 		[/each]
@@ -77,15 +95,15 @@
 </div>
 <div class="et_pb_row">
 	<div class="et_pb_column_1_2">
-		<div class="label">Notes</div>
+		<div class="label">Notes:</div>
 		<div>{@notes}</div>
 	</div>
-	<div class="et_pb_column_1_2" style="padding-left: 20px">
-		<div class="label">Driving questions</div>
+	<div class="et_pb_column_1_2" style="padding-left: 30px">
+		<div class="label">Driving questions:</div>
 		<div>{@driving_questions}</div>
 	</div>
 </div>
 <div class="et_pb_row" style="display:block">
-	<div class="et_pb_column_4_4"><span style="font-weight:bold;margin-right:10px">Topics:</span>{@topic}</div>
-	<div class="et_pb_column_4_4"><span style="font-weight:bold;margin-right:10px">Features:</span>{@feature}</div>
+	<div class="et_pb_column_3_3"><span style="font-weight:bold;">Topics: </span>{@topic}</div>
+	<div class="et_pb_column_3_3"><span style="font-weight:bold;">Features: </span>{@feature}</div>
 </div>

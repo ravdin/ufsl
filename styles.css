@@ -64,26 +64,37 @@
 
 .resource-details {
   display: inline-block;
-  width: 94%;
   padding-left: 10px;
 }
 
 .resource-content .search-result-item {
-  width: 100%;
   margin-bottom: 10px;
 }
 
 .resource-content .search-result-item .resource-details {
   display: inline-block;
-  width: 80%;
 }
 
 .resource-content .search-result-item .resource-title {
-  font-weight: bold;
+  font-weight: 700;
 }
 
 @media screen and (min-width: 768px) {
   .visible-xs {
     display: none!important;
   }
+}
+
+/* Browse Page Styles */
+.search_results .page-title {
+	font-weight: 700;
+	color: #666666;
+}
+.search_results #query-count {
+	font-weight: 400;
+	font-size: 18px;
+	color: #666666;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #666666;
 }
